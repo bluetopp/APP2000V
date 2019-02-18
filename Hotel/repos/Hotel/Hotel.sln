@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Hotel", "..\..\WebSites\Hotel\", "{03A371CC-460C-4F45-A12F-4B408FC7C740}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51433"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\Hotel\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51433\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51433"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\Hotel\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51433\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51433"
+		SlnRelativePath = "..\..\WebSites\Hotel\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{001A20F0-F35E-431A-A2D3-41829CBE6D3D}"
+	ProjectSection(SolutionItems) = preProject
+		.a11yrc = .a11yrc
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03A371CC-460C-4F45-A12F-4B408FC7C740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03A371CC-460C-4F45-A12F-4B408FC7C740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6CD7CE9-797F-4A63-9B8F-DCEC9F53578E}
+	EndGlobalSection
+EndGlobal

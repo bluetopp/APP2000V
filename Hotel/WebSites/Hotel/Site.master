@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="footer, address, phone, icons" />
+    <title>Good Hotel</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="Default.aspx" style="text-decoration:none;"><h3>Good <img class="logo" alt="Logo til Good Hotel" src="pictures/krone2.png" /> <span>Hotel</span></h3></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav"> 
+                    </ul>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Default">Hjem</a></li>
+                                <li><a runat="server" href="~/Romtyper">Romtyper</a></li>
+                                <li><a runat="server" href="~/KursOgKonferanser">Kurs og Konferanser</a></li>
+                                <li><a runat="server" href="~/MatOgDrikke">Mat og Drikke</a></li>
+                                <li><a runat="server" href="~/Selskap">Selskap</a></li>
+                                <li><a runat="server" href="~/Casino">Casino</a></li>
+                                <li><a runat="server" href="~/About">Om Hotellet</a></li>
+                                <li><a runat="server" href="~/Contact">Kontakt oss</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %>!</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="HovedBilde" runat="server">
+            </asp:ContentPlaceHolder>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+            </div>
+            <footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<a href="Default.aspx" style="text-decoration:none;"><h3>Good <img class="logo" alt="Logo til Good Hotel" src="pictures/krone2.png" /> <span>Hotel</span></h3></a>
+
+				<p class="footer-links">
+					<a href="Default.aspx">Hjem</a>
+					·
+					<a href="KursOgKonferanser.aspx">Kurs og konferanser</a>
+					·
+					<a href="MatOgDrikke.aspx">Mat & Drikke</a>
+					·
+					<a href="Selskap.aspx">Selskap</a>
+					·
+                    <a href="Casino.aspx">Casino</a>
+					·
+					<a href="About.aspx">Om Hotellet</a>
+					·
+					<a href="Contact">Kontakt oss</a>
+				</p>
+
+				<p class="footer-company-name">Good Hotel &copy; 2018</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>1. Good Street</span> Briksdalsbreen, Norge</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+47 123 45 678</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@goodhotel.com">support@goodhotel.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>Om Good Hotel</span>
+					Et eksklusivt hotel som ligger i den innerste dalen av Nordfjord, i et område som er kjent for sine spektakulære omgivelser med isbreer, flotte fjorder og fjell!
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+    </form>
+</body>
+</html>

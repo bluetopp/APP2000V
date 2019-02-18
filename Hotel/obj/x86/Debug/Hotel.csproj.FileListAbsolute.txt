@@ -1,0 +1,3 @@
+D:\Dropbox\APP2000V\marius\Hotel\obj\x86\Debug\Hotel.csprojResolveAssemblyReference.cache
+C:\Users\Kjetil Gudmundsen\Desktop\Hotel\Hotel\obj\x86\Debug\Hotel.csprojResolveAssemblyReference.cache
+C:\Users\Kjetil Gudmundsen\Desktop\Hotel\Hotel\obj\x86\Debug\Hotel.csproj.CoreCompileInputs.cache
